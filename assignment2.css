@@ -376,7 +376,7 @@ footer ul li a:hover {
 
 
 
-@media screen and (max-width:412px) {
+@media screen and (max-width:450px) {
     .main {
         width: 100%;
     }
