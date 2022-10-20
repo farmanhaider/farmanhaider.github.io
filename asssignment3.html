@@ -175,6 +175,7 @@
       switch (choice) {
         case "1":
           var a = [];
+           var flag=1;
 
           for (var i = 0; i <= 4; i++) {
             a[i] = parseInt(prompt("enter number"));
@@ -186,10 +187,10 @@
 
           for (var i = 0; i <= 4; i++) {
             if (s === a[i]) {
-              flag == 0;
+              flag = 0;
             }
           }
-          if (flag == 0) {
+          if (flag === 0) {
             alert("found");
             document.write("found");
           } else {
