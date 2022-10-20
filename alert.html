@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alert</title>
+  </head>
+  <body>
+    <script>
+      var sub1 = parseInt(prompt("enter subject1 marks"));
+      var sub2 = parseInt(prompt("enter subject2 marks"));
+      var sub3 = parseInt(prompt("enter subject3 marks"));
+      var sub4 = parseInt(prompt("enter subject4 marks"));
+      var sub5 = parseInt(prompt("enter subject5 marks"));
+
+      var total = sub1 + sub2 + sub3 + sub4 + sub5;
+
+      alert("total marks :" + total);
+      var percentage = (total / 500) * 100;
+
+      alert("percentage scored:" + percentage);
+
+      if (percentage > 80) {
+        alert("garde:A");
+      } else if (percentage > 60 && percentage <= 80) {
+        alert("grade:B");
+      } else if (percentage > 45 && percentage <= 60) {
+        alert("grade:C");
+      } else {
+        alert("fail");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+  <body>
+    <!-- ---------------------------Question1--------------------------------------------------------------- -->
+    <h2>Question1</h2>
+    <h2>Swap 2 number</h2>
+    <script>
+      var choice = prompt(
+        "enter options:\n 1: swap 2 Number with third variable \n 2: swap 2 Number without third variable\n 3: swap 2 number in one line or expression "
+      );
+      switch (choice) {
+        case "1":
+          var x = 10;
+          var y = 20;
+          alert("before swap");
+          alert("x=" + x);
+          alert("y=" + y);
+          document.write("before swap <br>");
+          document.write("x=" + x + "<br>");
+          document.write("y=" + y + "<br>");
+          var temp = x;
+          x = y;
+          y = temp;
+          alert("after swap");
+          alert("x=" + x);
+          alert("y=" + y);
+          document.write("after swap <br>");
+          document.write("x=" + x + "<br>");
+          document.write("y=" + y) + "<br>";
+          break;
+        case "2":
+          var x = 10;
+          var y = 20;
+          alert("before swap");
+          alert("x=" + x);
+          alert("y=" + y);
+          document.write("before swap <br>");
+          document.write("x=" + x + "<br>");
+          document.write("y=" + y + "<br>");
+          x = x + y; //10+20=30 x=30
+          y = x - y; //30-20=10 y=10
+          x = x - y; //30-10=20  x=20
+          alert("after swap");
+          alert("x=" + x);
+          alert("y=" + y);
+          document.write("after swap<br>");
+          document.write("x=" + x + "<br>");
+          document.write("y=" + y + "<br>");
+          break;
+        case "3":
+          var x = 10;
+          var y = 20;
+          alert("before swap");
+          alert("x=" + x);
+          alert("y=" + y);
+          document.write("before swap <br>");
+          document.write("x=" + x + "<br>");
+          document.write("y=" + y) + "<br>";
+          y = x + y - (x = y); //y=(10+20)-(x=20)
+          //y=30-20
+          //y=10
+          alert("after swap");
+          alert("x=" + x);
+          alert("y=" + y);
+          document.write("after swap<br>");
+          document.write("x=" + x + "<br>");
+          document.write("y=" + y + "<br>");
+          break;
+      }
+    </script>
+    <!-- ---------------------------Question2--------------------------------------------------------------- -->
+    <h2>Question 2</h2>
+    <h2>find its factorial and also disply the table of number</h2>
+    <script>
+      var choice = prompt(
+        "enter options:\n 1:factorail of number \n 2: Table of number "
+      );
+
+      switch (choice) {
+        case "1":
+          var num = parseInt(prompt("enter the number"));
+          var fact = 1;
+
+          for (var i = 1; i <= num; i++) {
+            fact = fact * i;
+          }
+          alert("factoial of:" + num + "is :" + fact);
+          document.write("factoial of:" + num + "is :" + fact);
+          break;
+        case "2":
+          var num = parseInt(prompt("enter the number"));
+
+          for (i = 1; i <= 10; i++) {
+            var res = num * i;
+            alert(res);
+            document.write(num + "\n* " + i + " = " + res + "<br>");
+          }
+          break;
+      }
+    </script>
+
+    <!-- ---------------------------Question3--------------------------------------------------------------- -->
+    <h1>Question3</h1>
+    <h2>Fibonacci Series</h2>
+    <script>
+      var n1 = 0;
+      var n2 = 1;
+      var n3;
+      var i;
+
+      document.write(n1 + " ");
+      document.write(n2 + " ");
+      for (
+        i = 2;
+        i <= 10;
+        ++i //loop starts from 2 because 0 and 1 are already printed
+      ) {
+        n3 = n1 + n2;
+        document.write(n3 + " ");
+        n1 = n2;
+        n2 = n3;
+      }
+    </script>
+    <!-- ---------------------------Question4--------------------------------------------------------------- -->
+    <h1>Question4</h1>
+    <h2>(1)Reverse of number</h2>
+    <h2>(2)sum of digit</h2>
+    <script>
+      var choice = prompt(
+        "enter options:\n 1:Reverse of number \n 2:sum of digit  "
+      );
+
+      switch (choice) {
+        case "1":
+          var num = parseInt(prompt("enter the number"));
+          var rev = 0;
+          var val = num;
+          while (num > 0) {
+            var remainder = num % 10;
+            rev = parseInt(rev * 10 + remainder);
+            num = parseInt(num / 10);
+          }
+          document.write(" reverse of " + val + " is: " + rev);
+          alert(" reverse of " + val + " is: " + rev);
+          break;
+
+        case "2":
+          var num = parseInt(prompt("enter the number"));
+          var val = 0;
+          var temp = num;
+          while (num > 0) {
+            var rem = parseInt(num % 10);
+            num = parseInt(num / 10);
+            val = val + rem;
+          }
+          alert(" sum of " + temp + " is : " + val);
+          document.write(" sum of " + temp + " is: " + val);
+          break;
+      }
+    </script>
+    <!-- ---------------------------Question5--------------------------------------------------------------- -->
+    <h2>question5</h2>
+    <h2>Serching Element in array</h2>
+    <script>
+      var choice = prompt(
+        "enter options:\n 1:searching element \n 2:Star pattern  "
+      );
+
+      switch (choice) {
+        case "1":
+          var a = [];
+
+          for (var i = 0; i <= 4; i++) {
+            a[i] = parseInt(prompt("enter number"));
+          }
+          for (var i = 0; i <= 4; i++) {
+            document.write(a[i] + " ");
+          }
+          var s = parseInt(prompt(" Enter the number you want to search: "));
+          for (var i = 0; i <= 4; i++) {
+            if (s == a[i]) {
+              alert("element found ");
+              document.write("element found");
+              break;
+            } else {
+              alert("element not found ");
+              document.write("element not found");
+            }
+          }
+
+        case "2":
+          let n = 5;
+          let string = "";
+          // External loop
+          for (let i = 1; i <= n; i++) {
+            // printing spaces
+            for (let j = 1; j <= n - i; j++) {
+              string += " ";
+            }
+            // printing star
+            for (let k = 0; k < 2 * i - 1; k++) {
+              string += "*";
+            }
+            string += "\n";
+          }
+          console.log(string);
+      }
+    </script>
+  </body>
+</html>
