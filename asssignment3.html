@@ -183,15 +183,18 @@
             document.write(a[i] + " ");
           }
           var s = parseInt(prompt(" Enter the number you want to search: "));
+
           for (var i = 0; i <= 4; i++) {
-            if (s == a[i]) {
-              alert("element found ");
-              document.write("element found");
-              break;
-            } else {
-              alert("element not found ");
-              document.write("element not found");
+            if (s === a[i]) {
+              flag == 0;
             }
+          }
+          if (flag == 0) {
+            alert("found");
+            document.write("found");
+          } else {
+            alert("not found");
+            document.write(" not found");
           }
 
         case "2":
